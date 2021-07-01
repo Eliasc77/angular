@@ -1,0 +1,22 @@
+.footer {
+
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 80px;
+  line-height: 50px;
+  text-align: center !important;
+}
+
+.personal{
+  background: white !important;
+  border-top: 1px solid  #777 !important;
+  box-sizing: border-box  !important;
+}
+
+p{
+    color: #777 !important;
+}
+
+

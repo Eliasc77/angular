@@ -1,0 +1,57 @@
+
+<div class="container col-md-6 ">
+  <div class="card">
+      <div class="card-header">
+          <h1>Nuevo Usuario</h1>
+      </div>
+      <div class="card-body">
+
+          <form action="">
+              <div class="form-group">
+                <label for="">DNI: </label>
+                <input [(ngModel)]="usu.dni" name="dni" type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">ROL: </label>
+                <input [(ngModel)]="usu.tipo_rol" name="rol" type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">NOMBRES: </label>
+                <input [(ngModel)]="usu.nombres" name="nombre" type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">APELLIDOS: </label>
+                <input [(ngModel)]="usu.apellidos" name="apellido" type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                  <label for="">EDAD: </label>
+                  <input [(ngModel)]="usu.edad" name="edad" type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                  <label for="">CORREO: </label>
+                  <input [(ngModel)]="usu.correo" name="correo" type="text" class="form-control">
+              </div>
+
+              <div class="form-group mb-3">
+                  <label for="">PASSWORD: </label>
+                  <input [(ngModel)]="usu.password" name="password" type="text" class="form-control">
+              </div>
+
+
+              <button (click)="guardar()" class="btn btn-lg btn-outline-success">
+                <i class="bi bi-check" style="margin-right: 5px;" ></i>Aceptar
+              </button>
+              <button class="btn btn-lg  btn-outline-danger btn-block" [routerLink]="['/admin/admin/user']">
+              <i class="bi bi-x-octagon" style="margin-right: 5px;" ></i>Cancelar
+              </button>
+
+          </form>
+
+      </div>
+  </div>
+</div>

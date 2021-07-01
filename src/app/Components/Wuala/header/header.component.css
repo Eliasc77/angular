@@ -1,0 +1,13 @@
+.personal{
+  background: white !important;
+  border-bottom: 1px solid  #777 !important;
+  box-sizing: border-box  !important;
+}
+a{
+  color: #777 !important;
+}
+.navbar-toggler{
+  color: black !important;
+}
+
+

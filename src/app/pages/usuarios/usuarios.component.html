@@ -1,0 +1,40 @@
+
+<div class="container mt-2 ">
+  <div class="card">
+      <div class="card-header">
+          <h1>Lista Usuarios</h1>
+          <p type="button" class="btn btn-success" [routerLink]="['/admin/admin/saveusu']">Agregar</p>
+      </div>
+      <div class="card-body">
+          <table class="table table-hover">
+              <thead class="colore">
+                  <tr class="text-center">
+                    <th scope="col">ID</th>
+                      <th scope="col">DNI</th>
+                      <th scope="col">Rol</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellidos</th>
+                      <th scope="col">Correo</th>
+                      <th scope="col">Password</th>
+                      <th scope="col">Acciones</th>
+                  </tr>
+              </thead>
+              <tbody class="cuerpo">
+                  <tr *ngFor="let u of usuario" class="text-center">
+                    <td>{{u.id}}</td>
+                      <td>{{u.dni}}</td>
+                      <td>{{u.tipo_rol}}</td>
+                      <td>{{u.nombres}}</td>
+                      <td>{{u.apellidos}}</td>
+                      <td>{{u.correo}}</td>
+                      <td>{{u.password}}</td>
+                      <td>
+                          <button class="btn btn-primary " (click)="edit(u)"  ><i class="bi bi-pencil" ></i></button>
+                          <button class="btn btn-danger" type="button" style="margin-left: 10px;" data-toggle="modal" data-target="#exampleModal"  (click)="delete(u)"    ><i class="bi bi-trash" ></i></button>
+                      </td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>

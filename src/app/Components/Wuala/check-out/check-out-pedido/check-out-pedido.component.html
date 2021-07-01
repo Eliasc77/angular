@@ -1,0 +1,84 @@
+
+<!---->
+<div class="container">
+  <div class="row">
+      <div class="col-md-8">
+        <br>
+
+        <form class="scheduler-border">
+
+          <h1>Pedido Envio </h1>
+          <div class="form-group">
+            <label for="">Direccion: </label>
+            <input  name="direccion" type="text" class="form-control" [(ngModel)]="pedido.direccion">
+
+          </div>
+
+
+
+          <h1>Tipo de pago </h1>
+          <div class="form-group">
+            <div class="col-md-3">
+                <label>Tipo Pago</label>
+            </div>
+            <div class="col-md-9">
+                <select class="custom-select d-block w-100" [(ngModel)]="seleccion"    (change)="capturar()" >
+                    <option >Elige ...</option>
+                    <option value="VISA" >VISA</option>
+                    <option value="CONTRA ENTREGA" >CONTRA ENTREGA</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+
+            <div class="col-md-6 mb-3">
+                <label>Numero Tarjeta(Si es Visa)</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+
+        <br>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" (click)="guardar()">Siguiente</button>
+      </div>
+      </form>
+
+    </div>
+
+
+
+    <div class="col-md-4">
+
+    <br>
+    <form>
+      <div class="row" class="scheduler-border">
+          <div class="col-md-12 order-md-2 mb-4">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted">Tu Compra</span>
+                  <span class="badge badge-secondary badge-pill">{{carritoItem.length}}</span>
+              </h4>
+              <ul class="list-group mb-3">
+                  <li *ngFor="let cartItem of carritoItem" class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <h6 class="my-0" hidden >{{cartItem.idProducto}}</h6>
+                          <h6 class="my-0">{{cartItem.nombre}}</h6>
+                          <small class="text-muted">Cantidad (x{{cartItem.cantidad}})</small>
+                      </div>
+                      <span class="text-muted"  >{{cartItem.cantidad * cartItem.precioUnit | currency: 'CAD':'symbol-narrow'}}</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Total (PEN)</span>
+                      <strong >{{totalPrice | currency: 'CAD':'symbol-narrow'}}</strong>
+                  </li>
+              </ul>
+          </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+</div>

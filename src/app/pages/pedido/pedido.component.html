@@ -1,0 +1,43 @@
+
+<div class="container mt-2 ">
+  <div class="card">
+      <div class="card-header">
+          <h1>Lista Pedidos</h1>
+          <p type="button" class="btn btn-success" [routerLink]="['/admin/admin/saveprod']">Agregar</p>
+      </div>
+      <div class="card-body">
+          <table class="table table-hover">
+              <thead class="colore">
+                  <tr class="text-center">
+
+                      <th scope="col">Codigo</th>
+                      <th scope="col">Cliente code</th>
+                      <th scope="col">Cod Tipo de pago</th>
+                      <th scope="col">direccion</th>
+                      <th scope="col">fecha</th>
+                      <th scope="col">Monto</th>
+                      <th scope="col">Estado</th>
+                      <th scope="col">Acciones</th>
+                  </tr>
+              </thead>
+              <tbody class="cuerpo">
+                  <tr *ngFor="let p of ped" class="text-center">
+
+                      <td>{{p.cod_pedido}}</td>
+                      <td>{{p.id}}</td>
+                      <td>{{p.cod_tipo_pago}}</td>
+                      <td>{{p.direccion}}</td>
+                      <td>{{p.fecha}}</td>
+                      <td>{{p.monto}}</td>
+                      <td>{{p.estado}}</td>
+
+                      <td>
+                          <button class="btn btn-primary " (click)="edit(p)"  ><i class="bi bi-pencil" ></i></button>
+                          <button class="btn btn-danger" type="button" style="margin-left: 10px;" data-toggle="modal" data-target="#exampleModal"  (click)="delete(p)"    ><i class="bi bi-trash" ></i></button>
+                      </td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>

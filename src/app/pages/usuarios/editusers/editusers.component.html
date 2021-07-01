@@ -1,0 +1,59 @@
+<div class="container col-md-6 ">
+  <div class="card">
+      <div class="card-header">
+          <h1>Editar Usuarios</h1>
+      </div>
+      <div class="card-body">
+
+          <form action="">
+            <div class="form-group">
+              <label for="">ID: </label>
+              <input [(ngModel)]="user.id" name="id" type="text" class="form-control" readonly>
+          </div>
+              <div class="form-group">
+                  <label for="">DNI: </label>
+                  <input [(ngModel)]="user.dni" name="dni" type="text" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label for="">Rol: </label>
+                <input [(ngModel)]="user.tipo_rol" name="rol" type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                  <label for="">Nombre: </label>
+                  <input [(ngModel)]="user.nombres" name="nombre" type="text" class="form-control">
+              </div>
+              <div class="form-group mb-3">
+                  <label for="">Apellido: </label>
+                  <input [(ngModel)]="user.apellidos" name="apellidos" type="text" class="form-control">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="">Edad: </label>
+                <input [(ngModel)]="user.edad" name="edad" type="text" class="form-control">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="">Correo: </label>
+              <input [(ngModel)]="user.correo" name="correo" type="text" class="form-control">
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="">Password: </label>
+            <input [(ngModel)]="user.password" name="password" type="text" class="form-control">
+        </div>
+
+
+              <button (click)="update(user)" class="btn btn-lg btn-outline-success">
+              <i class="bi bi-check" style="margin-right: 5px;" ></i>Actualizar
+          </button>
+              <button class="btn btn-lg  btn-outline-danger btn-block"  [routerLink]="['/admin/admin/user']">
+            <i class="bi bi-x-octagon" style="margin-right: 5px;"></i>Cancelar
+          </button>
+
+          </form>
+
+      </div>
+  </div>
+</div>

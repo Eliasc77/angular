@@ -1,0 +1,56 @@
+.imgp {
+  max-height: 600px !important;
+  min-width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+.featured {
+  height: 200px;
+}
+
+h2{
+    color: #FCC22F;
+    font-family: 'Yellowtail', cursive;
+    font-size: 40px;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-style: italic;
+}
+
+p{
+  color: #777;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.56px;
+  line-height: 26px;
+
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1{
+  margin-bottom: .5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 42px;
+}
+.features-content{
+  text-align: center;
+}
+
+a{
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 550px) {
+  h1{
+    text-align: center;
+  }
+
+}
